@@ -53,5 +53,36 @@ class CharacterMovie(models.Model):
     character=models.ForeignKey(Character, on_delete=models.CASCADE)
     movie=models.ForeignKey(Movie, on_delete=models.CASCADE)
 
+class Wildlife(models.Model):
+    name=models.CharField(max_length=200)
+    classification=models.CharField(max_length=200, null=True, blank=True)
+    habitat=models.CharField(max_length=200, null=True, blank=True)
+    diet=models.CharField(max_length=200, null=True, blank=True)
+    image=models.CharField(max_length=200, null=True, blank=True)
+
+class UserCharacter(models.Model):
+    name=models.CharField(max_length=200)
+    gender=models.CharField(max_length=200, null=True, blank=True)
+    planet=models.CharField(max_length=200, null=True, blank=True)
+    species=models.CharField(max_length=200, null=True, blank=True)    
+    image=models.CharField(max_length=200, null=True, blank=True)
+    force_sensitive=models.BooleanField(null=True, blank=True)
+    side=models.CharField(max_length=200, null=True, blank=True)
+    role=models.CharField(max_length=200, null=True, blank=True)
+    best_quote=models.CharField(max_length=200, null=True, blank=True)
+    lightsaber=models.CharField(max_length=200, null=True, blank=True)
+    sith_name=models.CharField(max_length=200, null=True, blank=True)
+
+class UserPlanet(models.Model):
+    name=models.CharField(max_length=200)
+    climate=models.CharField(max_length=200, null=True, blank=True)
+    terrain=models.CharField(max_length=200, null=True, blank=True)
+    image=models.CharField(max_length=200, null=True, blank=True)
+
+class UserWildlife(models.Model):
+    name=models.CharField(max_length=200)
+    classification=models.CharField(max_length=200, null=True, blank=True)
+    habitat=models.CharField(max_length=200, null=True, blank=True)
+    image=models.CharField(max_length=200, null=True, blank=True)
 
 

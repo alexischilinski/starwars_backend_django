@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from starwarsapi.models import Planet, Species, Character, Vehicle, Starship, Movie, CharacterMovie
+from starwarsapi.models import Planet, Species, Character, Vehicle, Starship, Movie, CharacterMovie, Wildlife, UserPlanet, UserWildlife, UserCharacter
 
 class PlanetSerializer(serializers.ModelSerializer):
     class Meta:
@@ -36,4 +36,24 @@ class VehicleSerializer(serializers.ModelSerializer):
 class StarshipSerializer(serializers.ModelSerializer):
     class Meta:
         model = Starship
+        fields = ('__all__')
+
+class WildlifeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Wildlife
+        fields = ('__all__')
+
+class UserCharacterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserCharacter
+        fields = ('__all__')
+
+class UserPlanetSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserPlanet
+        fields = ('__all__')
+
+class UserWildlifeSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = UserWildlife
         fields = ('__all__')
