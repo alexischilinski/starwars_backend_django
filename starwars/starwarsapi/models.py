@@ -61,11 +61,12 @@ class Wildlife(models.Model):
     image=models.CharField(max_length=200, null=True, blank=True)
 
 class UserCharacter(models.Model):
+    category=models.CharField(max_length=200, default='character')
     name=models.CharField(max_length=200)
     gender=models.CharField(max_length=200, null=True, blank=True)
     planet=models.CharField(max_length=200, null=True, blank=True)
     species=models.CharField(max_length=200, null=True, blank=True)    
-    image=models.CharField(max_length=200, null=True, blank=True)
+    image=models.CharField(max_length=500, null=True, blank=True)
     force_sensitive=models.BooleanField(null=True, blank=True)
     side=models.CharField(max_length=200, null=True, blank=True)
     role=models.CharField(max_length=200, null=True, blank=True)
@@ -74,15 +75,17 @@ class UserCharacter(models.Model):
     sith_name=models.CharField(max_length=200, null=True, blank=True)
 
 class UserPlanet(models.Model):
+    category=models.CharField(max_length=200, default='planet')
     name=models.CharField(max_length=200)
     climate=models.CharField(max_length=200, null=True, blank=True)
     terrain=models.CharField(max_length=200, null=True, blank=True)
-    image=models.CharField(max_length=200, null=True, blank=True)
+    image=models.CharField(max_length=500, null=True, blank=True)
 
 class UserWildlife(models.Model):
+    category=models.CharField(max_length=200, default='wildlife')
     name=models.CharField(max_length=200)
     classification=models.CharField(max_length=200, null=True, blank=True)
     habitat=models.CharField(max_length=200, null=True, blank=True)
-    image=models.CharField(max_length=200, null=True, blank=True)
+    image=models.CharField(max_length=500, null=True, blank=True)
 
 
