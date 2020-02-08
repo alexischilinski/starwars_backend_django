@@ -86,6 +86,7 @@ class UserWildlife(models.Model):
     name=models.CharField(max_length=200)
     classification=models.CharField(max_length=200, null=True, blank=True)
     habitat=models.CharField(max_length=200, null=True, blank=True)
+    diet=models.CharField(max_length=200, null=True, blank=True)
     image=models.CharField(max_length=500, null=True, blank=True)
 
 
